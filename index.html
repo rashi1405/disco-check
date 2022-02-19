@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Colour</title>
+    
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+body{
+    background: chartreuse;
+    font-size: 25px;
+    text-align: center;
+}
+
+lottie-player{
+  display: block;
+  margin: 0 auto;
+  width: 350px ;
+  height: 300px;
+  padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+  margin: 60px 0 0 ;
+  padding: 0%;
+}
+ 
+#sub {
+  font-size: 20px;
+  padding : 10px;
+  width : 180px;
+  background-color: black;
+  color: floralwhite;
+  margin-bottom : 100px;
+}
+
+#txt {
+  padding : 15px;
+  width: 50%;
+  font-size: 20px;
+  margin : 10px;
+} 
+
+@media (max-width:600px) {
+
+  body{
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #txt {
+    width : 70%;
+    margin-bottom: 30px;
+  }
+  
+  lottie-player{
+  height: 300px;
+}
+
+}
+  
+  
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Party hard, make mistakes , Do things<br> you're afraid to do.</h1>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_d6YcaL.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+        <h4> Drop your details below to join us at the party</h4>
+
+  <form>
+
+    <input type="email" placeholder="Enter your email" id="txt">
+
+    <input type="submit" value ="subscribe" id="sub">
+
+    </form>
+  
+    </div>
+</body>
+
+<script>
+      var index = 0;
+    function change(){
+
+        var array = ["red","green","yellow","brown","purple","blue"];
+
+        document.getElementsByTagName("body")[0].style.background = array[index++];
+
+        if(array.length-1 < index)
+           index = 0 ;
+
+           setTimeout(change,200);
+    }
+  
+    change();
+    
+</script>
+
+</html>
+
